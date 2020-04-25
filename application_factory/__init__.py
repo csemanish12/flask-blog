@@ -1,6 +1,8 @@
 from flask import Flask
 import os
 
+from application_factory import db
+
 
 def create_app(test_config=None):
     # create and configure app
@@ -25,4 +27,5 @@ def create_app(test_config=None):
     def hello():
         return 'Welcome, World!'
 
+    db.init_app(app)
     return app
