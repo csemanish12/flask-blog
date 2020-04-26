@@ -1,0 +1,4 @@
+include application_factory/schema.sql
+graft application_factory/static
+graft application_factory/templates
+global-exclude *.pyc
